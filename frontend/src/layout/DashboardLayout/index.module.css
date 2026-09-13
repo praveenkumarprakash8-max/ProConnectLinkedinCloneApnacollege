@@ -1,0 +1,103 @@
+.homeContainer {
+  display: flex;
+}
+
+.homeContainer > div:nth-child(odd) {
+  flex: 0.2;
+}
+
+.homeContainer > div:nth-child(even) {
+  flex: 0.6;
+}
+
+.homeContainer_leftBar {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgb(207, 205, 205);
+  gap: 1.2rem;
+  align-items: start;
+  /* justify-content: center; */
+}
+
+.sideBarOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+.sideBarOption:hover {
+  transform: scale(1.05);
+}
+
+.sideBarOption > svg {
+  width: 1.4em;
+  height: 1.4em;
+  min-width: 1.4em;
+  flex-shrink: 0;
+}
+
+.sideBarOption > p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.extraContainer {
+  border-left: 1px solid rgb(207, 205, 205);
+  padding: 1.2rem;
+}
+
+.feedContainer {
+  padding-inline: 0.8rem;
+}
+
+.mobileNavbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 6vh;
+  display: none;
+  justify-content: space-around;
+
+  background: white;
+
+  align-items: center;
+}
+
+/* .singleNavItemHolder_mobileView {
+  display: flex;
+  cursor: pointer;
+} */
+
+.mobileNavbar svg {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .extraContainer {
+    display: none;
+  }
+
+  .homeContainer {
+    display: block;
+  }
+
+  .homeContainer_leftBar {
+    display: none;
+  }
+
+  .mobileNavbar {
+    display: flex;
+  }
+
+  .feedContainer {
+    padding: 8vh;
+  }
+}

@@ -1,0 +1,214 @@
+.scrollComponent {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.createPostContainer {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding-inline: 0.8rem;
+  align-items: center;
+  background: rgb(255, 246, 246);
+  position: relative;
+  border-radius: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  max-width: 80%;
+}
+
+.uploadButton {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  background: rgb(136, 240, 87);
+  color: white;
+  border-radius: 10px;
+  padding-inline: 1.2rem;
+  padding-block: 0.8rem;
+  cursor: pointer;
+}
+
+.userProfile {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  min-height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.createPostContainer textarea {
+  flex: 1;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 20px;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.Fab {
+  background: rgb(25, 91, 171);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.Fab svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
+}
+
+.singleCard {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+.singleCard_profileContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  padding-right: 3.4rem;
+}
+
+.singleCard_profileContainer > div {
+  flex: 1;
+  width: 100%;
+}
+
+.singleCard_profileContainer > img {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.singleCard_image {
+  width: 100%;
+  padding-top: 0.6rem;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.singleCard_image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.optionContainer {
+  display: flex;
+  height: 20%;
+  width: 100%;
+  justify-content: space-between;
+  padding-block: 0.6rem;
+}
+
+.singleOption_optionContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.singleOption_optionContainer > svg {
+  width: 22px;
+  height: 22px;
+  padding-top: 0;
+  min-width: none;
+}
+
+.commentContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.7);
+  z-index: 2;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.allCommentsContainer {
+  width: 40vw;
+  height: 80vh;
+  background: white;
+  border-radius: 10px;
+  padding: 1.4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.allCommentsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.postCommentContainer {
+  position: sticky;
+  bottom: 0;
+  margin-top: auto;
+  background: white;
+  padding-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.postCommentContainer > input {
+  flex: 1;
+  min-width: 0;
+  padding-inline: 1.5rem;
+  padding-block: 1.2rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: rgb(227, 225, 225);
+}
+
+.postCommentContainer > input:focus {
+  border: 1px solid silver;
+}
+
+.postCommentContainer_commentBtn {
+  flex: 0.1;
+  width: fit-content;
+  padding: 1.2rem;
+  background: rgb(77, 76, 77);
+
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .allCommentsContainer {
+    width: 90svw;
+  }
+}
