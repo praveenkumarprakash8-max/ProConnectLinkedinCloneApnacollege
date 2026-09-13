@@ -1,0 +1,54 @@
+POST http://localhost:5000/register HTTP/1.1
+content-type: application/json
+
+{
+  "username": "praveen01",
+  "password": "mypassword4",
+  "email": "praveen@exampl5e.com",
+  "name": "Praveenk4umar"
+}
+
+###
+
+POST http://localhost:5000/login HTTP/1.1
+content-type: application/json
+
+{
+  "email": "praveen@exampl5e.com",
+  "password": "mypassword4"
+}
+
+###
+GET http://localhost:5000/get_user_and_profile HTTP/1.1
+content-type: application/json
+
+{
+  "token":   "3e379d21e95bcd429fb372149938103669f1a367b77631438675a96d16dcae2b"
+}
+
+###
+POST http://localhost:5000/update_profile_data HTTP/1.1
+content-type: application/json
+
+{
+    "token":  "3e379d21e95bcd429fb372149938103669f1a367b77631438675a96d16dcae2b",
+    "bio": "Here is kishan ",
+  "currentPost": "CTO",
+  "pastWork": [
+    {
+      "company": "ABC Corp",
+      "position": "Software Engineer",
+      "years": "3"
+    }
+  ],
+  "education": [
+    {
+      "school": "XYZ University",
+      "degree": "Bachelor's in Computer Science",
+      "fieldOfStudy": "2093-2383"
+    }
+  ]
+}
+
+###
+GET http://localhost:5000/get_all_user_profiles HTTP/1.1
